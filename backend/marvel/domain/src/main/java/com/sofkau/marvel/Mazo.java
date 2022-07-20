@@ -1,17 +1,22 @@
 package com.sofkau.marvel;
 
-import java.util.Collections;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Mazo {
 
     private String id;
     private Set<Carta> mazo;
 
-    public Mazo(String id, Set<Carta> mazo) {
+    public Mazo(String id, List<Carta> mazo) {
         this.id = id;
-        this.mazo = mazo;
+        this.mazo = barajarMazo(mazo);
+    }
+
+    private Set<Carta> barajarMazo(List<Carta> mazo) {
+        Collections.shuffle(mazo);
+        Set<Carta> mazo_barajado = new HashSet<>();
+        mazo_barajado.addAll(mazo);
+        return mazo_barajado;
     }
 
     public Set<Carta> mazo() {
@@ -33,10 +38,9 @@ public class Mazo {
 
     private Carta seleccionarCarta(){
 
-        Carta carta = mazo. .stream()
-                .collect(Collections.shuffle(mazo));
-
-        return carta;
+        return mazo.stream()
+                .findAny()
+                .get();
     }
 
     public int indexAleatorio() {
