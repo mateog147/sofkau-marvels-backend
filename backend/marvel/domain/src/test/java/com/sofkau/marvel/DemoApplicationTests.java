@@ -1,10 +1,10 @@
-package com.example.demo;
+package com.sofkau.marvel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MarvelApplicationTests {
+class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
