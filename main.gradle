@@ -25,6 +25,9 @@ subprojects {
         testCompileOnly  "org.projectlombok:lombok:${lombokVersion}"
         testAnnotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
         implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+
+        // https://mvnrepository.com/artifact/org.springframework/spring-context
+        implementation 'org.springframework:spring-context:5.3.18'
     }
 
     test.finalizedBy(project.tasks.jacocoTestReport)
