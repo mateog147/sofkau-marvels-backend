@@ -11,12 +11,13 @@ subprojects {
     apply plugin: 'jacoco'
     apply plugin: 'io.spring.dependency-management'
 
-    compileJava.dependsOn validateStructure
+    compileJava
     sourceCompatibility = JavaVersion.VERSION_11
 
     dependencies {
         implementation 'io.projectreactor:reactor-core'
         implementation 'io.projectreactor.addons:reactor-extra'
+        implementation 'org.springframework:spring-context'
 
         testImplementation 'io.projectreactor:reactor-test'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
@@ -26,8 +27,7 @@ subprojects {
         testAnnotationProcessor  "org.projectlombok:lombok:${lombokVersion}"
         implementation platform("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 
-        // https://mvnrepository.com/artifact/org.springframework/spring-context
-        implementation 'org.springframework:spring-context:5.3.18'
+
     }
 
     test.finalizedBy(project.tasks.jacocoTestReport)

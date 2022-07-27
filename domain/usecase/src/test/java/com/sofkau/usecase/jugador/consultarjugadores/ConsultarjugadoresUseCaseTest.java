@@ -7,11 +7,13 @@ import lombok.AllArgsConstructor;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.test.StepVerifier;
 
+@SpringBootTest(classes=ConsultarjugadoresUseCase.class)
 @DataMongoTest
 @Import(ConsultarjugadoresUseCase.class)
 class ConsultarjugadoresUseCaseTest {
