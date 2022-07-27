@@ -33,7 +33,6 @@ public class WebSocketConfiguration {
     HandlerMapping handlerMapping(WebSocketHandler wsh) {
         return new SimpleUrlHandlerMapping() {
             {
-
                 setUrlMap(Collections.singletonMap("/ws/apuestas", wsh));
                 setOrder(10);
             }
