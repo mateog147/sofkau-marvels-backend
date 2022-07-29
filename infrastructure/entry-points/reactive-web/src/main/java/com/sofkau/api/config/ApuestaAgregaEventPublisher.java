@@ -11,7 +11,7 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.function.Consumer;
 
-@Component
+//@Component
 public class ApuestaAgregaEventPublisher implements ApplicationListener<ApuestaAgregaEvent>, Consumer<FluxSink<ApuestaAgregaEvent>> {
 
     private final Executor executor;

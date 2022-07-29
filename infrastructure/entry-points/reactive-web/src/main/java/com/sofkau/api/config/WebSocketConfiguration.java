@@ -19,9 +19,9 @@ import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 import java.util.logging.Logger;
 
-@Configuration
+//@Configuration
 public class WebSocketConfiguration {
-
+/*
     private  final Logger logger = Logger.getLogger("logger");
     @Bean
     Executor executor() {
@@ -75,5 +75,5 @@ public class WebSocketConfiguration {
             return session.send(messageFlux);
         };
     }
-
+*/
 }
